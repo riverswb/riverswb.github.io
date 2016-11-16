@@ -1,31 +1,33 @@
-h1 {
-  color:blue;
-  border:2px solid blue;
-  margin:auto;
-  text-align:center;
+#header {
+  z-index: 1;
+  border:2px solid black;
 }
 
-#introduction {
-  font-size: 1.5em;
-  color:green;
+#header > h1 {
+  text-align: center;
 }
 
-h3 p {
-  display: inline-block;
-  float: left;
+#body {
+  text-align: center;
+}
+
+#footer {
+  z-index: 100;
+  text-align: center;
 }
 
 a {
-  text-decoration:none;
+    text-decoration: none;
 }
 
-a:hover {
-  color:red;
-  font-size: 20px;
-}
+/*#footer:nth-child(1) {
+  text-align: left;
+}*/
 
-h3 img {
-  display:inline-block;
-  float: right;
-  width:500px;
-}
+/*#footer:nth-child(2) {
+  text-align: center;
+}*/
+
+/*#footer:nth-child(3){
+  text-align: right;
+}*/
