@@ -1,9 +1,4 @@
-/** {
-  background-color: #7EC0EE;
-}*/
-
 #header {
-  /*background-color: transparent;*/
   width:auto;
 }
 
@@ -12,7 +7,7 @@
   font-family: Arial, Verdana, sans-serif;
 }
 
-#contact {
+#contact-link {
   font-family: Arial, Verdana, sans-serif;
   float: left;
   text-align: right;
@@ -21,7 +16,7 @@
   width: 250px
 }
 
-#blog {
+#blog-link {
   font-family: Arial, Verdana, sans-serif;
   float: right;
   text-align: left;
@@ -47,18 +42,31 @@
 
 .links {
   text-align: center;
-  background-color: #7EC0EE;
 }
 
 body {
   background-color: #7EC0EE;
 }
 
-#footer {
-  z-index: 100;
+#blog-container {
+  /*max-width: 75%;*/
+}
+
+.blog {
+  font-family: Arial, Verdana, sans-serif;
+
+  text-align: center;
+
+}
+
+.footer {
   text-align: center;
 }
 
+.footer a {
+  padding: 0px 10px;
+}
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
