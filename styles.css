@@ -1,34 +1,36 @@
+* {
+  background-color: #7EC0EE;
+}
+
+#header {
+  width:auto;
+}
+
 #name {
   text-align: center;
   font-family: Lucida Sans;
 }
 
-* {
-  background-color: #7EC0EE;
+#contact {
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 250px
+}
+
+#blog {
+  float: right;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 250px;
 }
 
 #image-container img {
   max-width: 100%;
   max-height: auto;
 }
-
-#header {
-  z-index: 1;
-  border:2px solid black;
-}
-
-#header > h1 {
-  text-align: center;
-}
-
-/*.body {
-  text-align: center;
-}
-
-.body > p {
-  text-align: center;
-  font-family: Lucida Sans;
-}*/
 
 #footer {
   z-index: 100;
@@ -38,15 +40,3 @@
 a {
     text-decoration: none;
 }
-
-/*#footer:nth-child(1) {
-  text-align: left;
-}*/
-
-/*#footer:nth-child(2) {
-  text-align: center;
-}*/
-
-/*#footer:nth-child(3){
-  text-align: right;
-}*/
