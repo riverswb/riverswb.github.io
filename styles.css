@@ -1,3 +1,17 @@
+#name {
+  text-align: center;
+  font-family: Lucida Sans;
+}
+
+* {
+  background-color: #7EC0EE;
+}
+
+#image-container img {
+  max-width: 100%;
+  max-height: auto;
+}
+
 #header {
   z-index: 1;
   border:2px solid black;
@@ -7,9 +21,14 @@
   text-align: center;
 }
 
-#body {
+/*.body {
   text-align: center;
 }
+
+.body > p {
+  text-align: center;
+  font-family: Lucida Sans;
+}*/
 
 #footer {
   z-index: 100;
