@@ -67,6 +67,10 @@ body {
   padding: 0px 10px;
 }
 
+#license {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
