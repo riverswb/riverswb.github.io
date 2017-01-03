@@ -40,7 +40,7 @@
             however with practice you will soon see benefits in your code.
           </p>
       <h2>Why use Bcrypt?</h3>
-        <h3>Introduction to Bcrypt</h5>
+        <h3>Introduction to Bcrypt</h3>
           <p>
             Bcrypt is used as the default password storage hashing algorithm in
             the OpenBSD Project, which is reguaded as the most secure way to
@@ -57,13 +57,31 @@
             this is called collision, the lower the risk of collision the better
             .
           </p>
-        <h3>Rainbow Tables</h5>
+        <h3>Rainbow Tables</h3>
           <p>
             Rainbow tables are precomputed tables for reverse engineering hashes
-            used for encryption, typically password hashes.
+            used for encryption, typically password hashes. Since rainbow tables
+            are precomputed, they are easily overcome by adding a salt to the
+            passwords.
           </p>
-        <h3>Salting</h5>
+        <h3>Salting</h3>
           <p>Bcrypt has salts built into prevent rainbow table attacks!</p>
+        <h3>Using Bcrypt</h3>
+        <p>Using Bcrypt is simple, the following list assumes you already have
+          all necessary functionality, but you are storing passwords in plain
+          text.</p>
+          <ol>
+            <li>You're user table needs a "password_digest" field, which is a
+            string.</li>
+            <li>Remove the password column from you're user table.</li>
+            <li>In you're Gemfile uncomment the bcrypt gem: "gem 'bcrypt', '~>
+              3.1.7'"</li>
+            <li>In the User model file add "has_secure_password", this gives
+              the user model bcrypt authentication methods.</li>
+            <li>Run "bundle install" and restart the rails server.</li>
+            <li>In you're forms, you just use "password" or :password to create
+              users and for users to login</li>
+        </ol>
     </div>
       <div class="footer">
         <a href="index.html">Home</a>
