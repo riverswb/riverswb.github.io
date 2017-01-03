@@ -65,7 +65,15 @@
             passwords.
           </p>
         <h3>Salting</h3>
-          <p>Bcrypt has salts built into prevent rainbow table attacks!</p>
+          <p>
+            In cryptology, salt is random data that is used to make passwords
+            more secure.  Salt is automatically added to the password, when it
+            is  being stored in the database.  Since the salt is added
+            automatically it can make dictionary  and rainbow table exploits
+            prohibitively long, without impacting the user experience.
+            <strong>Bcrypt has salts built into prevent rainbow table attacks!
+            </strong>
+          </p>
         <h3>Using Bcrypt</h3>
         <p>Using Bcrypt is simple, the following list assumes you already have
           all necessary functionality, but you are storing passwords in plain
