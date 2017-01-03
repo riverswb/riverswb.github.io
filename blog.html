@@ -53,11 +53,18 @@
             that represents the original string.  Hashing is always a one way
             operation, there is no way to go back, if a hash can be reverse
             engineered it is not sufficient to use for encryption.  A good hash
-            function will produce different outputs from the same inputs, this
-            this is called collision, the lower the risk of collision the better
-            .
+            function will produce different outputs from the same inputs. If the
+            hash output for the same inputs is equal, this is called collision
+            , the lower the risk of collision the better.
           </p>
         <h3>Rainbow Tables</h3>
+          <p>
+            When passwords were stored as plaintext in databases, dictionary
+            attacks were a common method to gain access to an account, using a
+            predefined list of guesses.  As we evolved our methods of storing
+            passwords, from plaintext to encrypted hashes, methods used
+            to gain access evolved as well.
+          </p>
           <p>
             Rainbow tables are precomputed tables for reverse engineering hashes
             used for encryption, typically password hashes. Since rainbow tables
@@ -79,16 +86,16 @@
           all necessary functionality, but you are storing passwords in plain
           text.</p>
           <ol>
-            <li>You're user table needs a "password_digest" field, which is a
-            string.</li>
-            <li>Remove the password column from you're user table.</li>
+            <li>Add a "password_digest" column, which is a
+            string, to the user table</li>
+            <li>Remove the "password" column from the user table.</li>
             <li>In you're Gemfile uncomment the bcrypt gem: "gem 'bcrypt', '~>
               3.1.7'"</li>
-            <li>In the User model file add "has_secure_password", this gives
+            <li>In the user model file add "has_secure_password", this gives
               the user model bcrypt authentication methods.</li>
             <li>Run "bundle install" and restart the rails server.</li>
-            <li>In you're forms, you just use "password" or :password to create
-              users and for users to login</li>
+            <li>In you're forms, continue to use "password" or :password to create
+              users and login users.</li>
         </ol>
     </div>
       <div class="footer">
